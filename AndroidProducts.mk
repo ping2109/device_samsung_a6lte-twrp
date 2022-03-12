@@ -14,7 +14,10 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/a6lte/
+PRODUCT_MAKEFILES := \
+     $(LOCAL_DIR)/omni_a6lte.mk
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_a6lte.mk
+COMMON_LUNCH_CHOICES := \
+    omni_a6lte-user \
+    omni_a6lte-userdebug \
+    omni_a6lte-eng
